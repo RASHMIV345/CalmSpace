@@ -1,0 +1,21 @@
+:root{--bg:#f3f8f5;--card:#fff;--ink:#233;--soft:#6b7f78;--accent:#3f8a73;--warm:#e8f3ee}
+@media(prefers-color-scheme:dark){:root{--bg:#14201c;--card:#1d2d27;--ink:#e6f0ec;--soft:#9bb3aa;--warm:#25392f;--accent:#4f9d86}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,sans-serif}
+.app{max-width:680px;margin:auto;padding:16px}header{text-align:center}header p,.muted{color:var(--soft);margin:0}
+nav{display:flex;gap:6px;margin:12px 0}nav button{flex:1;background:var(--warm);color:var(--ink);padding:10px 4px}nav .active{background:var(--accent);color:#fff}
+.card{background:var(--card);border-radius:18px;padding:20px;margin:14px 0;box-shadow:0 2px 12px #0001;display:flex;flex-direction:column;gap:10px}
+.center{align-items:center;text-align:center}
+button{border:0;border-radius:12px;padding:12px 18px;background:var(--accent);color:#fff;font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid #7cc4ae;outline-offset:2px}
+input,textarea,select{font:inherit;padding:10px;border-radius:10px;border:1px solid #0003;background:var(--bg);color:var(--ink);width:100%}
+label{display:flex;flex-direction:column;gap:4px}
+.moods{display:flex;gap:6px}.mood{flex:1;background:var(--warm);color:var(--ink);font-size:28px;display:flex;flex-direction:column;align-items:center;padding:8px 2px}.mood small{font-size:11px}
+.garden{display:flex;flex-wrap:wrap;gap:6px;font-size:28px;min-height:44px}
+.orb{width:170px;height:170px;border-radius:50%;background:var(--warm);display:grid;place-items:center;border:4px solid var(--accent)}
+.orb.run{animation:pulse 16s infinite}@keyframes pulse{0%{transform:scale(.7)}25%,50%{transform:scale(1.1)}75%,100%{transform:scale(.7)}}
+.entry{border-top:1px solid #0002;padding-top:8px}.link{background:none;color:var(--accent);padding:4px 0;text-decoration:underline;text-align:left}
+.step{flex-direction:row;gap:10px;align-items:flex-start}.step input{width:auto;margin-top:6px}
+.row{display:flex;gap:8px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-top:1px solid #0002;padding-top:8px}.row select{width:auto}
+.err{color:#c0392b;margin:0}
+.help{background:var(--warm);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:4px;margin-top:16px}.help a{color:var(--accent);font-weight:600}.help small{color:var(--soft)}
+@media(prefers-reduced-motion:reduce){.orb.run{animation:none}}
